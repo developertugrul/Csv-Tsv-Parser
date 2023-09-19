@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['file'])) {
     $combinations = UniqueCombinations::count($products);
     $outputFile = 'output.csv';
     $file = fopen($outputFile, 'w');
-    fputcsv($file, ['make', 'model', 'colour', 'capacity', 'network', 'grade', 'condition', 'count']);
+    fputcsv($file, ['make', 'model', 'condition', 'grade', 'capacity', 'colour', 'network', 'count']);
     foreach ($combinations as $combination) {
         fputcsv($file, $combination);
     }

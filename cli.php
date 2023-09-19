@@ -24,7 +24,7 @@ foreach ($products as $product) {
 $combinations = UniqueCombinations::count($products);
 
 $file = fopen($options['unique-combinations'], 'w');
-fputcsv($file, ['make', 'model', 'colour', 'capacity', 'network', 'grade', 'condition', 'count']);
+fputcsv($file, ['brand_name', 'model_name', 'colour', 'capacity', 'network', 'grade', 'condition', 'count']);
 
 foreach ($combinations as $combination) {
     fputcsv($file, $combination);
